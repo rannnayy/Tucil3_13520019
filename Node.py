@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, parentNode, matrix, emptyTilePos, noNode, ci, fi):
+    def __init__(self, parentNode, matrix, emptyTilePos, noNode, ci, fi, movement):
         # parent node
         self.parentNode = parentNode
         # matrix of the puzzle
@@ -16,7 +16,7 @@ class Node:
         # depth of the node from the root node
         self.fi = fi
         # movement made to this node from this node's parent
-        # self.movement = movement
+        self.movement = movement
     
     def __lt__(self, next):
         return self.ci < next.ci
